@@ -1,0 +1,185 @@
+/* --- GLOBAL STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #1a202c;
+    --dark-navy: #0f172a;
+    --gold: #d4af37;
+    --gold-hover: #bfa030;
+    --slate: #2d3748;
+    --white: #ffffff;
+    --gray: #4a5568;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* --- NAVIGATION --- */
+.main-nav {
+    background-color: var(--dark-navy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8%;
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.main-nav nav a:hover {
+    color: var(--gold);
+}
+
+.btn-login {
+    border: 1px solid white;
+    padding: 8px 22px;
+    border-radius: 20px;
+    transition: all 0.3s !important;
+}
+
+.btn-login:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--dark-navy) !important;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 90vh; /* Reduced slightly so footer/content shows */
+    width: 100%;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.3)), 
+                url('../images/diego-jimenez-A-NVHPka9Rk-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* --- BOOKING FORM CONTAINER --- */
+.booking-container {
+    background: var(--white);
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    padding: 30px;
+    color: var(--navy);
+}
+
+.booking-form h2 {
+    color: var(--dark-navy);
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.input-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 6px;
+}
+
+.input-group input, .input-group select {
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+.date-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-btn {
+    width: 100%;
+    background-color: var(--gold);
+    color: var(--dark-navy);
+    border: none;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.view-btn:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* --- DASHBOARDS & GRID (For vehicles.php & admin) --- */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.vehicle-card {
+    background-color: var(--slate);
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.vehicle-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
